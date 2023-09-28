@@ -1,15 +1,15 @@
 "use client"
 import { useLayoutEffect, useState } from "react";
 
-export default function Canvas() {
+const Canvas = () => {
     const [elements, setElements] = useState([])
     const [isDrawing, setIsDrawing] = useState(false)
 
     useLayoutEffect(() => {
         const canvas = document.getElementById("canvas") as HTMLCanvasElement;
         const context = canvas.getContext("2d")!
-        // context.fillStyle = "green";
-        // context.fillRect(10, 10, 150, 100);
+        context.fillStyle = "green";
+        context.fillRect(10, 10, 150, 100);
 
 
     }, [])
@@ -27,3 +27,5 @@ export default function Canvas() {
 
     )
 }
+
+export default Canvas

@@ -4,11 +4,13 @@ import Toolbar from "./Toolbar"
 
 const Navbar = () => {
     return (
-        <div className=" flex justify-between items-center">
-            <Menu />
-            <Toolbar />
-            <Collaboration />
-        </div>
+        <div className='relative'>
+            <div className=" flex justify-between items-center text-[#b8b8b8]">
+                <Menu />
+                <Toolbar />
+                <Collaboration />
+            </div >
+        </div >
     )
 }
 export default Navbar
