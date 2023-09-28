@@ -1,11 +1,13 @@
+import Collaboration from "./Collaboration"
+import Menu from "./Menu"
 import Toolbar from "./Toolbar"
 
 const Navbar = () => {
     return (
         <div className=" flex justify-between items-center">
-            <div>Menu</div>
+            <Menu />
             <Toolbar />
-            <div>Collab</div>
+            <Collaboration />
         </div>
     )
 }

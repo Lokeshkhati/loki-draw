@@ -7,11 +7,11 @@ import ToolBox from "@/components/ToolBox";
 export default function Home() {
   return (
 
-    <div className='p-4' >
-      <Navbar />
-      <ToolBox />
-      <Canvas />
-      <Footer />
+    <div  >
+      <div className='p-4' >
+        <Navbar />
+        <Footer />
+      </div>
     </div>
   )
 }
