@@ -9,9 +9,7 @@ const Canvas = () => {
         const canvas = document.getElementById("canvas") as HTMLCanvasElement;
         const context = canvas.getContext("2d")!
         context.fillStyle = "green";
-        context.fillRect(10, 10, 150, 100);
-
-
+        context.fillRect(100, 100, 200, 200);
     }, [])
 
     const handleMouseDown = () => { }

@@ -1,7 +1,7 @@
 const Collaboration = () => {
     return (
         <div>
-            <button className=" bg-[#a8a5ff] flex justify-center items-center w-[2.25rem] h-[2.25rem] border text-[#4f4d6f] border-[#a8a5ff] rounded-md hover:bg-[#b2aeff] hover:border-[#b2aeff]" >
+            <button title='Live collaboration' className=" bg-[#a8a5ff] flex justify-center items-center w-[2.25rem] h-[2.25rem] border text-[#4f4d6f] border-[#a8a5ff] rounded-md hover:bg-[#b2aeff] hover:border-[#b2aeff]" >
                 <svg
                     className="w-4 h-4"
                     fill="none"
