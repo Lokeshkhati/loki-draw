@@ -11,9 +11,8 @@ const Canvas = () => {
         context.fillStyle = "green";
         context.fillRect(100, 100, 200, 200);
     }, [])
-    const draw = () => {
 
-    }
+    const draw = () => { }
     const handleMouseDown = () => { }
     const handleMouseUp = () => { }
     const handleMouseMove = () => { }
