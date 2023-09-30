@@ -1,10 +1,11 @@
 "use client"
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 
 const Canvas = () => {
     const [elements, setElements] = useState([])
     const [isDrawing, setIsDrawing] = useState(false)
 
+    const canvasRef = useRef(null)
     useLayoutEffect(() => {
         const canvas = document.getElementById("canvas") as HTMLCanvasElement;
         const context = canvas.getContext("2d")!
@@ -18,7 +19,7 @@ const Canvas = () => {
     const handleMouseMove = () => { }
 
     return (
-        <canvas id='canvas' width={window.innerWidth} height={window.innerHeight}
+        <canvas ref={canvasRef} id='canvas' width={window.innerWidth} height={window.innerHeight}
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
             onMouseMove={handleMouseMove}
