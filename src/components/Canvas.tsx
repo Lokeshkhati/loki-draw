@@ -4,6 +4,10 @@ import { useLayoutEffect, useRef, useState } from "react";
 const Canvas = () => {
     const [elements, setElements] = useState([])
     const [isDrawing, setIsDrawing] = useState(false)
+    const [canvasSize, setCanvasSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight
+    });
 
     const canvasRef = useRef(null)
     useLayoutEffect(() => {
@@ -18,13 +22,25 @@ const Canvas = () => {
     const handleMouseUp = () => { }
     const handleMouseMove = () => { }
 
-    return (
-        <canvas ref={canvasRef} id='canvas' width={window.innerWidth} height={window.innerHeight}
-            onMouseDown={handleMouseDown}
-            onMouseUp={handleMouseUp}
-            onMouseMove={handleMouseMove}
-        > Canvas</canvas>
+    const handleZoom = (factor: number) => {
+        setCanvasSize((prevSize) => ({
+            width: prevSize.width * factor,
+            height: prevSize.height * factor
+        }))
+    };
 
+    return (
+        <>
+            <div className="z-40">
+                <button onClick={() => handleZoom(1.2)}>Zoom In</button>
+                <button onClick={() => handleZoom(0.8)}>Zoom Out</button>
+            </div>
+            <canvas ref={canvasRef} id='canvas' width={canvasSize.width} height={canvasSize.height}
+                onMouseDown={handleMouseDown}
+                onMouseUp={handleMouseUp}
+                onMouseMove={handleMouseMove}
+            > Canvas</canvas>
+        </>
     )
 }
 
